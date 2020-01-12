@@ -1,0 +1,131 @@
+<!--jquery-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--owl carousel-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!--semantic button-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/button.min.css">
+
+<!--CSS-->
+<style>
+     html, body{
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #index-cont{
+        width: 100%;
+        height: 100%;
+        background-color: #1a1a1a;
+    }
+
+    #index-cont > div{
+        /* align-items: center; */
+        /* position: absolute; */
+        padding: 5rem 0;
+    }
+
+    #title{
+        color: white;
+        font-family: 'Public Sans', sans-serif;
+        width: 100%;
+        text-align: center;
+        display: table;
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .movie-title{
+        margin-top: 1rem;
+    }
+    
+    .movie-date{
+        margin-top: 0.2rem;
+    }
+    .movie-title, .movie-date{
+        color: white;
+        font-family: 'Public Sans', sans-serif;
+        letter-spacing: 0.2rem;
+    }
+
+    .owl-carousel{
+        vertical-align: middle;
+        text-align: center;
+        /* border:1px solid blue; */
+    }
+    .movie-cont{
+        /* border:1px solid red; */
+        height: 25rem;
+    }
+
+    .movie-cont > img{
+        display: block;
+        /* min-height: 100%; */
+        opacity: 0;
+    } 
+
+    a{
+        text-transform: uppercase !important;
+        letter-spacing: 0.2rem;
+        margin: 2.5rem auto !important;
+        display: block !important;
+        width: 20rem;
+        /* margin-top: 2.5rem !important; */
+    }
+</style>
+
+<!--HTML-->
+<div id="index-cont"> 
+    <div>
+        <div id="title">What you can watch...</div>
+    
+        <div class="owl-carousel">
+            <div class="related-owl-item"> 
+                <div class="movie-cont" style="background: url('https://nerdist.com/wp-content/uploads/2019/06/justice-league-1200x676.jpg'); background-size: cover;" > 
+                    <img src="https://nerdist.com/wp-content/uploads/2019/06/justice-league-1200x676.jpg">
+                </div>
+                <div class="movie-title">Movie Title</div>
+                <div class="movie-date">Movie Date</div>
+            </div>
+        
+            <div class="related-owl-item"> 
+                <div class="movie-cont" style="background: url('https://cnet3.cbsistatic.com/img/xLgPeuq6CW9A2N2V2kKmhMT6h2o=/1092x0/2019/03/14/dd4d8d9c-5f16-4f6b-a7d8-65a00d095c2c/avengers-endgame-poster-square-crop.jpg'); background-size: cover;" > 
+                    <img src="https://cnet3.cbsistatic.com/img/xLgPeuq6CW9A2N2V2kKmhMT6h2o=/1092x0/2019/03/14/dd4d8d9c-5f16-4f6b-a7d8-65a00d095c2c/avengers-endgame-poster-square-crop.jpg">
+                </div>
+                <div class="movie-title">Movie Title</div>
+                <div class="movie-date">Movie Date</div>
+            </div>
+        </div>
+
+        <a class="negative ui button" href="/">start over</a>
+    </div>
+</div>
+
+<script>
+// owl carousel
+$(".owl-carousel").owlCarousel( { 
+		loop:true,
+		margin: 20,
+		responsive: {
+			0: {
+				items: 1
+			},
+
+			501: {
+				items: 2
+			},
+
+			701: {
+				items: 3
+			}
+		}
+	});
+</script>
