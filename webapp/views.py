@@ -10,6 +10,7 @@ def index(request):
     #filter data here
     data = "data"
     
+    
     return render(request, "pages/index.html", { 'data': data })
 
 
