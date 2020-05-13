@@ -1,4 +1,7 @@
-<!--CSS-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gander</title>
 <link href="https://fonts.googleapis.com/css?family=Public+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 <style>
     html, body{
@@ -66,38 +69,66 @@
         color: white;
         font-size: 3rem;
     }
-
 </style>
+</head>
 
-<!--HTML-->
-<div id="landing-cont">
+<body>
+    <div id="landing-cont">
 
-    <div>
-        <div id="question">How many minutes do you have?</div>
+        <div>
+            <div id="question">How many minutes do you have?</div>
 
-        <form id="selections" method="GET" action="/index">
-          
-            <input type="text" value="30" name="answer" hidden>
+            <form id="selections" method="GET" action="/index">
+            
+                <input type="text" value="0" name="minutes" id="answer" hidden>
 
-            <button class="selection" type="submit">
-                <div class="text">30</div>
-            </button>
+                <button class="selection" type="button">
+                    <div class="text">30</div>
+                </button>
 
-                
-            <div class="selection">
-                <div class="text">40</div>
-            </div>
+                <button class="selection" type="button">
+                    <div class="text">40</div>
+                </button>
 
-            <div class="selection">
-                <div class="text">60</div>
-            </div>
+                <button class="selection" type="button">
+                    <div class="text">60</div>
+                </button>
 
-            <div class="selection">
-                <div class="text">90</div>
-            </div>
-        </form>
+                <button class="selection" type="button">
+                    <div class="text">90</div>
+                </button>
+            </form>
+        </div>
     </div>
-    
+</body>
+<script>
+const selection = Array.from(document.getElementsByClassName('selection'));
+const answer = document.getElementById('answer');
+const form = document.getElementById('selections');
 
-</div>
+//set value depending on selection
+selection.forEach((element, index) => {
+    element.addEventListener("click", () => {
+        switch(index){
+            case 0:
+                answer.value = '30';
+                break;
+            case 1:
+                answer.value = '40';
+                break;
+            case 2:
+                answer.value = '60';
+                break;
+            case 3:
+                answer.value = '90';
+                break;
+        }
+        form.submit(); //submit form
+    });
+        
+});
+
+</script>
+
+</html>
 
