@@ -32,9 +32,16 @@
     }
 
     #index-cont > div{
-        /* align-items: center; */
-        /* position: absolute; */
         padding: 5rem 0;
+        margin: 0 -20rem !important;
+    }
+
+    #note{
+        font-family: 'Public Sans', sans-serif;
+        text-align: center;
+        color: rgba(255,255,255,0.3);
+        letter-spacing: 0.1rem;
+        font-style: italic;
     }
 
     #title{
@@ -68,10 +75,8 @@
     .owl-carousel{
         vertical-align: middle;
         text-align: center;
-        /* border:1px solid blue; */
     }
     .movie-cont{
-        /* border:1px solid red; */
         height: 25rem;
     }
 
@@ -84,7 +89,7 @@
     .negative.ui.button{
         text-transform: uppercase !important;
         letter-spacing: 0.2rem;
-        margin: 2.5rem auto !important;
+        margin: 2.5rem auto 1rem auto !important;
         display: block !important;
         width: 20rem;
         /* margin-top: 2.5rem !important; */
@@ -119,9 +124,9 @@
                 </a>
             </div>
             {% endfor %}
-        </div>
-
+        </div>        
         <a class="negative ui button" href="/">start over</a>
+        <div id=note>Drag or Swipe to navigate</div>
     </div>
 </div>
 </body>
@@ -132,12 +137,12 @@ $(".owl-carousel").owlCarousel( {
 		loop:true,
 		margin: 20,
 		responsive: {
-			0: {
-				items: 1
-			},
+			// 0: {
+			// 	items: 1
+			// },
 
-			501: {
-				items: 2
+			400: {
+				items: 1
 			},
 
 			701: {
