@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -128,3 +129,5 @@ STATICFILES_DIRS = [
 # this fixed 'You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.' error
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+django_heroku.settings(locals())
