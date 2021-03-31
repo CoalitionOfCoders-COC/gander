@@ -5,7 +5,7 @@ django-heroku==0.3.1
 gevent==20.5.0
 greenlet==0.4.15
 grequests==0.6.0
-lxml==4.5.0
+lxml==4.6.3
 psycopg2==2.8.5
 pytz==2020.1
 sqlparse==0.3.1
